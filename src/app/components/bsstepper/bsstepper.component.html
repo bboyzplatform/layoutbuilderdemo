@@ -1,0 +1,37 @@
+<mat-card class="mat-">
+    <mat-card-title>
+        Мастер создания представления
+    </mat-card-title>
+
+    <mat-horizontal-stepper [linear]="isLinear">
+        <mat-step label="Шаг1">
+            <div>
+                <h4>Выберите название нового представления и объекты-источники</h4>
+                <form [formGroup]="firstFormGroup">
+                    <mat-form-field>
+                        <input matInput placeholder="Название представления" formControlName="firstCtrl" required>
+                    </mat-form-field>
+                    <br />
+                    <mat-form-field>
+                        <mat-select placeholder="Источник данных" [(ngModel)]="selectedValue" name="food">
+                            <mat-option *ngFor="let food of foods" [value]="food.value">
+                                {{sourceObj.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                </form>
+                <button mat-button matStepperNext>Далее</button>
+            </div>
+        </mat-step>
+        <mat-step label="Шаг 3">
+            Выберите операции с данными.
+            <div>
+                <button mat-button matStepperPrevious>Назад</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+
+
+
+</mat-card>

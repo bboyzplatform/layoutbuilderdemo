@@ -1,0 +1,9 @@
+* {
+    font-family: 'Roboto';
+}
+
+mat-toolbar span {
+    font-family: Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
